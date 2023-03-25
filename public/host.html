@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>Casino Counter</title>
+</head>
+
+<body>
+  <div id="login" class="fadeIn-animation hidden">
+    <h2 id="login-title">Login</h2>
+
+    <input type="email" placeholder="Email" id="email-input" />
+    <input type="password" placeholder="Password" id="password-input" />
+
+    <button id="login-btn">Login</button>
+  </div>
+
+  <div id="host" class="hidden">
+    <h2 id="login-title">Casino Host</h2>
+
+    <div>
+      <input type="text" placeholder="Username" id="username-input">
+      <button type="button" id="load-btn">Load</button>
+    </div>
+
+    <div>
+      <button type="button" id="subtract-btn">-</button>
+      <input placeholder="Money" id="counter-input" />
+      <button type="button" id="add-btn">+</button>
+      <button type="button" id="update-btn">Update</button>
+    </div>
+
+    <div id="message"></div>
+  </div>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-storage.js"></script>
+  <script src="firebase.js"></script>
+
+  <!-- Custom Javascript -->
+  <script src="authentification.js"></script>
+  <script src="fetch.js"></script>
+  <script src="update.js"></script>
+</body>
+
+</html>
