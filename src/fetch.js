@@ -7,6 +7,11 @@ const message = document.getElementById("message");
 
 const getAmount = () => {
   message.innerHTML = "";
+  if (counterInput) {
+    counterInput.value = "";
+  } else {
+    counter.innerHTML = "";
+  }
 
   database
     .doc(String(usernameInput.value).toLowerCase())
@@ -29,7 +34,7 @@ const getAmount = () => {
 };
 
 usernameInput.addEventListener("keydown", (e) => {
-  if (e.key === "Enter" && !counterInput.value) {
+  if (e.key === "Enter" && (counterInput ? !counterInput.value : true)) {
     getAmount();
   }
 });
